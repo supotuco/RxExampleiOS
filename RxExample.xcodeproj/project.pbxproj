@@ -14,6 +14,11 @@
 		F1026751202F791E0031FCE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F102674F202F791E0031FCE7 /* LaunchScreen.storyboard */; };
 		F102675C202F791E0031FCE7 /* RxExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102675B202F791E0031FCE7 /* RxExampleTests.swift */; };
 		F1026767202F791E0031FCE7 /* RxExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1026766202F791E0031FCE7 /* RxExampleUITests.swift */; };
+		F1026779202F7DDD0031FCE7 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1026775202F7DDD0031FCE7 /* RxSwift.framework */; };
+		F102677A202F7DDD0031FCE7 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1026776202F7DDD0031FCE7 /* RxCocoa.framework */; };
+		F102677C202F7DDD0031FCE7 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1026778202F7DDD0031FCE7 /* RxBlocking.framework */; };
+		F102677D202F7DF50031FCE7 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1026777202F7DDD0031FCE7 /* RxTest.framework */; };
+		F102677E202F7DF70031FCE7 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1026777202F7DDD0031FCE7 /* RxTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,10 @@
 		F1026762202F791E0031FCE7 /* RxExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1026766202F791E0031FCE7 /* RxExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxExampleUITests.swift; sourceTree = "<group>"; };
 		F1026768202F791E0031FCE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1026775202F7DDD0031FCE7 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = SOURCE_ROOT; };
+		F1026776202F7DDD0031FCE7 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = SOURCE_ROOT; };
+		F1026777202F7DDD0031FCE7 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = SOURCE_ROOT; };
+		F1026778202F7DDD0031FCE7 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +63,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F102677A202F7DDD0031FCE7 /* RxCocoa.framework in Frameworks */,
+				F1026779202F7DDD0031FCE7 /* RxSwift.framework in Frameworks */,
+				F102677C202F7DDD0031FCE7 /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F102677D202F7DF50031FCE7 /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F102677E202F7DF70031FCE7 /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +91,7 @@
 		F102673A202F791E0031FCE7 = {
 			isa = PBXGroup;
 			children = (
+				F1026774202F7DB80031FCE7 /* RxSwift */,
 				F1026745202F791E0031FCE7 /* RxExample */,
 				F102675A202F791E0031FCE7 /* RxExampleTests */,
 				F1026765202F791E0031FCE7 /* RxExampleUITests */,
@@ -123,6 +138,17 @@
 				F1026768202F791E0031FCE7 /* Info.plist */,
 			);
 			path = RxExampleUITests;
+			sourceTree = "<group>";
+		};
+		F1026774202F7DB80031FCE7 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				F1026778202F7DDD0031FCE7 /* RxBlocking.framework */,
+				F1026776202F7DDD0031FCE7 /* RxCocoa.framework */,
+				F1026775202F7DDD0031FCE7 /* RxSwift.framework */,
+				F1026777202F7DDD0031FCE7 /* RxTest.framework */,
+			);
+			path = RxSwift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +454,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HMF73UR4RQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.RxExample;
@@ -443,6 +473,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HMF73UR4RQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.RxExample;
@@ -459,6 +493,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HMF73UR4RQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.RxExampleTests;
@@ -476,6 +514,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HMF73UR4RQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.RxExampleTests;
@@ -492,6 +534,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HMF73UR4RQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.RxExampleUITests;
@@ -508,6 +554,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HMF73UR4RQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.RxExampleUITests;
